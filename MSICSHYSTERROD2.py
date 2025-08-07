@@ -76,7 +76,7 @@ into Gmstack.
 """
 Gmstack=[]
 for k in range(1,601):
-    filename='C:\\Users\\bencl\\Documents\\LeBlanc Lab\\PythonFiles\\11142023\\MSICS_1.7us_'+f'{k:03}'+'.txt'
+    filename='filepath\\MSICS_1.7us_'+f'{k:03}'+'.txt'
     intdata = pd.read_csv(filename,sep="\t",header=None,skiprows=3,skipfooter=imagesize+3,engine='python',encoding='unicode_escape')
     intdata=intdata.to_numpy()
     Odata=intdata
@@ -252,4 +252,5 @@ plt.ylabel("Displacement $\Delta$r (m)")
 plt.xscale('log')
 plt.colorbar()
 plt.title('G($\Delta r,\\tau$) vs TimeLag $\\tau$ and Displacement $\Delta r$')
+
 plt.show()
